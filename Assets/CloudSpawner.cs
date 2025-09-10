@@ -21,12 +21,23 @@ public class CloudSpawner : MonoBehaviour
     {
         float cameraTopY = Camera.main.transform.position.y + Camera.main.orthographicSize;
 
-        // Use 'if' instead of 'while' to prevent too many clouds per frame
-        if (nextSpawnY < cameraTopY + bufferAbove)
+
+        while (nextSpawnY < cameraTopY + bufferAbove)
         {
             SpawnCloud(nextSpawnY);
             nextSpawnY += Random.Range(verticalSpacing * 0.8f, verticalSpacing * 1.2f);
         }
+
+
+
+
+        // Use 'if' instead of 'while' to prevent too many clouds per frame
+       /* if (nextSpawnY < cameraTopY + bufferAbove)
+        {
+            SpawnCloud(nextSpawnY);
+            nextSpawnY += Random.Range(verticalSpacing * 0.8f, verticalSpacing * 1.2f);
+        }
+        */
     }
 
     void SpawnCloud(float yPos)
@@ -34,9 +45,6 @@ public class CloudSpawner : MonoBehaviour
         float xPos = Random.Range(-horizontalRange, horizontalRange);
         Vector3 spawnPos = new Vector3(xPos, yPos, 10f);
         GameObject cloud = Instantiate(cloudPrefab, spawnPos, Quaternion.identity);
-
-        // Optional tag for cleanup/debugging
-        cloud.tag = "Cloud";
 
         ParallaxBackground parallax = cloud.GetComponent<ParallaxBackground>();
         if (parallax != null && parallax.cameraTransform == null)

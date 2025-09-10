@@ -17,12 +17,6 @@ public class BranchSpawn : MonoBehaviour
         // Start just above the bird’s starting Y
         nextSpawnY = bird.position.y + spawnInterval;
 
-        // Pre-spawn some initial branches
-     //   for (int i = 0; i < 10; i++)
-       // {
-        //    SpawnBranch();
-         //   nextSpawnY += spawnInterval;
-      //  }
     }
 
     // Update is called once per frame
