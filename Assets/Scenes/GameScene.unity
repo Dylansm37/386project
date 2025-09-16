@@ -2317,8 +2317,8 @@ MonoBehaviour:
   minSpawnInterval: 3
   maxSpawnInterval: 6
   minSpeed: 15
-  maxSpeed: 35
-  yOffset: -3
+  maxSpeed: 30
+  yOffset: -5
   spawnBuffer: 2
 --- !u!4 &2033361357
 Transform:
