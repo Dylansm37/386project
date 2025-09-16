@@ -779,7 +779,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   maxSpawnInterval: 6
   minSpeed: 15
   maxSpeed: 35
-  yOffset: 0
+  yOffset: -3
   spawnBuffer: 2
 --- !u!4 &2033361357
 Transform:
