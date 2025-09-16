@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6032264660398206885}
-  - component: {fileID: -514494359110810511}
   m_Layer: 0
   m_Name: branches
   m_TagString: Branch
@@ -34,18 +33,6 @@ Transform:
   - {fileID: 2554029345545454851}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-514494359110810511
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085680605122795594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c784ca2db212c5041b7a3b46bc74d627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroyOffscreen
 --- !u!1 &1539534179797626503
 GameObject:
   m_ObjectHideFlags: 0
