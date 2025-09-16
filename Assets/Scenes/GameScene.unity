@@ -160,6 +160,11 @@ Transform:
   - {fileID: 1300967857}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &93063241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1085680605122795594, guid: 6d63bd478c7a12a498a26344b713a1ec, type: 3}
+  m_PrefabInstance: {fileID: 5607307443985129259}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &101437401
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1521,7 +1526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 460d56f929431e340be3cc7fce1cab25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  branchPrefab: {fileID: 1085680605122795594, guid: 6d63bd478c7a12a498a26344b713a1ec, type: 3}
+  branchPrefab: {fileID: 93063241}
   bird: {fileID: 282823220}
   spawnInterval: 20
   horizontalRange: 1
