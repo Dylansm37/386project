@@ -3040,6 +3040,14 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7421665441045943896, guid: 6d63bd478c7a12a498a26344b713a1ec, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -15.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 7421665441045943896, guid: 6d63bd478c7a12a498a26344b713a1ec, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.51
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
     - {fileID: 1166312036738108549, guid: 6d63bd478c7a12a498a26344b713a1ec, type: 3}
