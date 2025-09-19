@@ -23,13 +23,12 @@ public class GameTimer : MonoBehaviour
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    // Call this when the player finishes collecting worms
+    // call this when the player finishes collecting worms
     public void StopTimer()
     {
         isRunning = false;
     }
 
-    // Optional: Restart the timer
     public void ResetTimer()
     {
         timeElapsed = 0f;

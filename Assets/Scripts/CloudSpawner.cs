@@ -4,7 +4,6 @@ public class CloudSpawner : MonoBehaviour
 {
     public GameObject cloudPrefab;
     public Transform bird;
-
     public float verticalSpacing = 10f;
     public float horizontalRange = 8f;
     public float bufferAbove = 5f;
@@ -27,17 +26,6 @@ public class CloudSpawner : MonoBehaviour
             SpawnCloud(nextSpawnY);
             nextSpawnY += Random.Range(verticalSpacing * 0.8f, verticalSpacing * 1.2f);
         }
-
-
-
-
-        // Use 'if' instead of 'while' to prevent too many clouds per frame
-       /* if (nextSpawnY < cameraTopY + bufferAbove)
-        {
-            SpawnCloud(nextSpawnY);
-            nextSpawnY += Random.Range(verticalSpacing * 0.8f, verticalSpacing * 1.2f);
-        }
-        */
     }
 
     void SpawnCloud(float yPos)

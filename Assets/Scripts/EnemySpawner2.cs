@@ -7,7 +7,7 @@ public class EnemySpawner2 : MonoBehaviour
     public float maxSpawnInterval = 6f;
     public float minSpeed = 15f;
     public float maxSpeed = 30f;
-    public float yOffset = 0f;
+    public float yOffset = -3f;
     public float spawnBuffer = 2f;
 
     private float timer = 0f;
@@ -39,7 +39,7 @@ public class EnemySpawner2 : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // Right edge of the screen
+        // right side of the screen
         Vector3 rightEdge = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, cam.nearClipPlane));
         float spawnY = cam.transform.position.y + yOffset;
 
@@ -47,7 +47,7 @@ public class EnemySpawner2 : MonoBehaviour
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
-        // Set random speed
+        // set random speed
         float randomSpeed = Random.Range(minSpeed, maxSpeed);
 
         EnemyFlyAcross flyScript = enemy.GetComponent<EnemyFlyAcross>();
@@ -55,7 +55,5 @@ public class EnemySpawner2 : MonoBehaviour
         {
             flyScript.speed = randomSpeed;
         }
-
-        Debug.Log($"Spawned enemy at {spawnPos} with speed {randomSpeed}");
     }
 }

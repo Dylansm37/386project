@@ -7,7 +7,7 @@ public class EnemyFlyAcross : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // Clean up after it flies across
+        Destroy(gameObject, lifetime); // destroy after it flies across
     }
 
     void Update()

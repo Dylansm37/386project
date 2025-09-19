@@ -6,7 +6,7 @@ public class WormCollector : MonoBehaviour
     public int wormsCollected = 0;
     public int totalWorms = 10;
     public TMP_Text wormProgressText;
-    public GameObject winPanel; // ← Link this in Inspector!
+    public GameObject winPanel; 
 
     void Start()
     {
@@ -23,6 +23,7 @@ public class WormCollector : MonoBehaviour
 
             if (wormsCollected >= totalWorms)
             {
+                Time.timeScale = 0f;
                 WinGame();
             }
         }
@@ -36,11 +37,8 @@ public class WormCollector : MonoBehaviour
 
     void WinGame()
     {
-        Debug.Log("You collected all the worms! You win!");
-
         if (winPanel != null)
             winPanel.SetActive(true);
 
-        Time.timeScale = 0f; // Optional: pause game
     }
 }

@@ -5,11 +5,10 @@ public class EnemySpawner : MonoBehaviour
     public GameObject enemyPrefab;
     public float minSpawnInterval = 3f;
     public float maxSpawnInterval = 6f;
-    public float minSpeed = 15f;
+    public float minSpeed = 10f;
     public float maxSpeed = 30f;
-    public float yOffset = 0f;
+    public float yOffset = 10f;
     public float spawnBuffer = 2f;
-
     private float timer = 0f;
     private float currentSpawnInterval;
     private Camera cam;
@@ -39,7 +38,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // Left edge of the screen
+        // left side of the screen
         Vector3 leftEdge = cam.ViewportToWorldPoint(new Vector3(0, 0.5f, cam.nearClipPlane));
         float spawnY = cam.transform.position.y + yOffset;
 
@@ -47,7 +46,7 @@ public class EnemySpawner : MonoBehaviour
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
-        // Set random speed
+        // set random speed
         float randomSpeed = Random.Range(minSpeed, maxSpeed);
 
         EnemyFlyAcross flyScript = enemy.GetComponent<EnemyFlyAcross>();
@@ -55,7 +54,5 @@ public class EnemySpawner : MonoBehaviour
         {
             flyScript.speed = randomSpeed;
         }
-
-        Debug.Log($"Spawned enemy at {spawnPos} with speed {randomSpeed}");
     }
 }

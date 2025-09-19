@@ -3,7 +3,7 @@ using UnityEngine;
 public class MainMenuUI : MonoBehaviour
 {
     public GameObject controlsPanel;
-    public GameObject mainMenuPanel; // Optional, if you're hiding/showing panels
+    public GameObject mainMenuPanel; 
 
     public void ShowControls()
     {
