@@ -14,7 +14,7 @@ public class BirdCollision : MonoBehaviour
         if (!isDead)
         {
     
-		//Die();
+		Die();
 
         }
     }
