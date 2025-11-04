@@ -3,6 +3,9 @@ using UnityEngine;
 public class EnemySpawner2 : MonoBehaviour
 {
     public GameObject enemyPrefab;
+    public AudioClip spawnSound;        // Assign the spawn sound in Inspector
+    public float spawnVolume = 1f;      // Adjust volume if needed
+
     public float minSpawnInterval = 3f;
     public float maxSpawnInterval = 6f;
     public float minSpeed = 15f;
@@ -39,7 +42,7 @@ public class EnemySpawner2 : MonoBehaviour
 
     void SpawnEnemy()
     {
-        // right side of the screen
+        // Right side of the screen
         Vector3 rightEdge = cam.ViewportToWorldPoint(new Vector3(1, 0.5f, cam.nearClipPlane));
         float spawnY = cam.transform.position.y + yOffset;
 
@@ -47,13 +50,18 @@ public class EnemySpawner2 : MonoBehaviour
 
         GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.identity);
 
-        // set random speed
+        // Set random speed
         float randomSpeed = Random.Range(minSpeed, maxSpeed);
-
         EnemyFlyAcross flyScript = enemy.GetComponent<EnemyFlyAcross>();
         if (flyScript != null)
         {
             flyScript.speed = randomSpeed;
+        }
+
+        // Play spawn sound at enemy position
+        if (spawnSound != null)
+        {
+            AudioSource.PlayClipAtPoint(spawnSound, spawnPos, spawnVolume);
         }
     }
 }
