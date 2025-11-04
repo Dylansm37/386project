@@ -15,6 +15,8 @@ public class BirdCollision : MonoBehaviour
         {
     
 		Die();
+        PlayerPrefs.DeleteKey("WormsCollected");
+
 
         }
     }

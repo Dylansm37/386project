@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2932293439911198994}
   - component: {fileID: -1076363944686893302}
   - component: {fileID: -6068989917006089528}
+  - component: {fileID: 8618015345084433881}
   m_Layer: 0
   m_Name: eagle
   m_TagString: Untagged
@@ -283,3 +284,17 @@ PolygonCollider2D:
       - {x: 3.791298, y: 1.5242515}
       - {x: 3.7157526, y: 2.0722566}
   m_UseDelaunayMesh: 0
+--- !u!114 &8618015345084433881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2412141833829327597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4a85b7ac86c6664b869860107273245, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SaveableDynamic
+  objectID: enemy1
+  isActive: 1

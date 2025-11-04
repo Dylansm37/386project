@@ -34,4 +34,17 @@ public class GameTimer : MonoBehaviour
         timeElapsed = 0f;
         isRunning = true;
     }
+
+    public void SaveTime()
+    {
+        PlayerPrefs.SetFloat("TimeElapsed", timeElapsed);
+        PlayerPrefs.Save();
+    }
+
+    public void LoadTime()
+    {
+        timeElapsed = PlayerPrefs.GetFloat("TimeElapsed", 0f);
+        UpdateTimerDisplay();
+    }
+
 }

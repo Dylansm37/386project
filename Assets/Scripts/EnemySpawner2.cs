@@ -6,7 +6,7 @@ public class EnemySpawner2 : MonoBehaviour
     public AudioClip spawnSound;        // Assign the spawn sound in Inspector
     public float spawnVolume = 1f;      // Adjust volume if needed
 
-    public float minSpawnInterval = 3f;
+    public float minSpawnInterval = 0f;
     public float maxSpawnInterval = 6f;
     public float minSpeed = 15f;
     public float maxSpeed = 30f;
